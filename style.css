@@ -1,0 +1,86 @@
+body {
+  background-color: #121212;
+  color: #e0e0e0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.filter-bar {
+  background-color: #1e1e1e;
+  border: 2px solid #333333;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 30px;
+}
+
+.form-select, .form-control {
+  background-color: #2b2b2b;
+  border: 1px solid #444444;
+  color: #ffffff;
+}
+
+.form-select:focus, .form-control:focus {
+  background-color: #333333;
+  color: #ffffff;
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+.product-card {
+  background-color: #1e1e1e;
+  border: 2px solid #333333;
+  border-radius: 8px;
+  padding: 12px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  border-color: #0d6efd;
+}
+
+.image-container {
+  width: 100%;
+  height: 200px;
+  border: 1px solid #444444;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: #2b2b2b;
+  margin-bottom: 12px;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.info-box {
+  border: 1px solid #444444;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-weight: 600;
+  background-color: #252525;
+  margin-bottom: 8px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tag-box {
+  border: 1px solid #444444;
+  padding: 4px 6px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  background-color: #252525;
+  text-align: center;
+}
+
+.btn-search {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}

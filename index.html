@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shoe Store - Product Listing</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container py-4">
+    <h2 class="text-center mb-4 text-uppercase tracking-wide fw-bold">Exclusive Shoe Collection</h2>
+
+    <div class="filter-bar">
+      <form id="filterForm" class="row g-2 align-items-center">
+        
+        <div class="col-12 col-sm-6 col-md-2">
+          <select id="brandFilter" class="form-select">
+            <option value="All">Brand (All)</option>
+            <option value="Nike">Nike</option>
+            <option value="Adidas">Adidas</option>
+            <option value="Puma">Puma</option>
+          </select>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-2">
+          <select id="colorFilter" class="form-select">
+            <option value="All">Color (All)</option>
+            <option value="Black">Black</option>
+            <option value="White">White</option>
+            <option value="Blue">Blue</option>
+            <option value="Red">Red</option>
+            <option value="Green">Green</option>
+          </select>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-2">
+          <select id="sizeFilter" class="form-select">
+            <option value="All">Size (All)</option>
+            <option value="42">Size 42</option>
+            <option value="44">Size 44</option>
+            <option value="46">Size 46</option>
+            <option value="48">Size 48</option>
+          </select>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-3">
+          <select id="priceFilter" class="form-select">
+            <option value="All">Price Range (All)</option>
+            <option value="0-100">Up to $100</option>
+            <option value="101-200">$101 - $200</option>
+            <option value="201-300">$201 - $300</option>
+          </select>
+        </div>
+    
+        <div class="col-12 col-md-3">
+          <button type="submit" class="btn btn-primary w-100 btn-search">SEARCH</button>
+        </div>
+
+      </form>
+    </div>
+
+    <div id="productGrid" class="row g-4">
+    </div>
+
+    <div id="noProductsMessage" class="alert alert-warning text-center mt-4 d-none" role="alert">
+      No shoes match your selected filter criteria. Try resetting filters!
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
