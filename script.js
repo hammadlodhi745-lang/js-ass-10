@@ -41,7 +41,22 @@ const shoes = [
   { id: 12, name: "Future Rider", brand: "Puma", size: 48, color: "Black", price: 150, image: shoeImages.Black[2] },
   { id: 13, name: "Jordan Retro", brand: "Nike", size: 42, color: "Blue", price: 210, image: shoeImages.Blue[2] },
   { id: 14, name: "Run Falcon", brand: "Adidas", size: 44, color: "White", price: 100, image: shoeImages.White[2] },
-  { id: 15, name: "Flyer Runner", brand: "Puma", size: 46, color: "Green", price: 85, image: shoeImages.Green[2] }
+  { id: 15, name: "Flyer Runner", brand: "Puma", size: 46, color: "Green", price: 85, image: shoeImages.Green[2] },
+  { id: 16, name: "Air Force One Premium", brand: "Nike", size: 42, color: "White", price: 125, image: "images/shoe-16.jpg" },
+  { id: 17, name: "Court High Retro", brand: "Nike", size: 44, color: "Red", price: 140, image: "images/shoe-17.jpg" },
+  { id: 18, name: "Free Run Trail", brand: "Nike", size: 46, color: "Green", price: 135, image: "images/shoe-18.jpg" },
+  { id: 19, name: "Flex Runner", brand: "Nike", size: 48, color: "Green", price: 180, image: "images/shoe-19.jpg" },
+  { id: 20, name: "Urban Court", brand: "Nike", size: 42, color: "Orange", price: 165, image: "images/shoe-20.jpg" },
+  { id: 21, name: "Fresh Foam 574", brand: "New Balance", size: 44, color: "Pink", price: 95, image: "images/shoe-21.jpg" },
+  { id: 22, name: "Air Max Orange Burst", brand: "Nike", size: 46, color: "Orange", price: 190, image: "images/shoe-22.jpg" },
+  { id: 23, name: "Air Max Sunrise", brand: "Nike", size: 48, color: "Orange", price: 175, image: "images/shoe-23.jpg" },
+  { id: 24, name: "Smash Classic", brand: "Puma", size: 42, color: "White", price: 80, image: "images/shoe-24.jpg" },
+  { id: 25, name: "New Balance 247", brand: "New Balance", size: 44, color: "Green", price: 120, image: "images/shoe-25.jpg" },
+  { id: 26, name: "Air Max Sunset", brand: "Nike", size: 46, color: "Orange", price: 210, image: "images/shoe-26.jpg" },
+  { id: 27, name: "Air Force One Wheat", brand: "Nike", size: 48, color: "Brown", price: 145, image: "images/shoe-27.jpg" },
+  { id: 28, name: "Old Skool Maroon", brand: "Vans", size: 42, color: "Red", price: 115, image: "images/shoe-28.jpg" },
+  { id: 29, name: "Street Classic", brand: "Nike", size: 44, color: "White", price: 150, image: "images/shoe-29.jpg" },
+  { id: 30, name: "Revolution Red", brand: "Nike", size: 46, color: "Red", price: 105, image: "images/shoe-30.jpg" }
 ];
 
 const productGrid = document.getElementById('productGrid');
@@ -119,4 +134,3 @@ filterForm.addEventListener('submit', function(e) {
 });
 
 renderProducts(shoes);
-
