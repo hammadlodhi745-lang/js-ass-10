@@ -60,12 +60,26 @@ const shoes = [
 ];
 
 const productGrid = document.getElementById('productGrid');
-const filterForm = document.getElementById('filterForm');
 const brandFilter = document.getElementById('brandFilter');
 const colorFilter = document.getElementById('colorFilter');
 const sizeFilter = document.getElementById('sizeFilter');
 const priceFilter = document.getElementById('priceFilter');
+const resetFiltersButton = document.getElementById('resetFilters');
 const noProductsMessage = document.getElementById('noProductsMessage');
+
+function populateFilterOptions(select, values, label) {
+  const sortedValues = [...new Set(values)].sort((a, b) =>
+    typeof a === 'number' ? a - b : String(a).localeCompare(String(b))
+  );
+
+  select.innerHTML = `<option value="All">${label} (All)</option>`;
+  sortedValues.forEach(value => {
+    const option = document.createElement('option');
+    option.value = value;
+    option.textContent = label === 'Size' ? `Size ${value}` : value;
+    select.appendChild(option);
+  });
+}
 
 function renderProducts(productList) {
   if (productList.length === 0) {
@@ -128,9 +142,22 @@ function filterProducts() {
   renderProducts(filtered);
 }
 
-filterForm.addEventListener('submit', function(e) {
-  e.preventDefault();
+function handleFilterChange() {
+  filterProducts();
+}
+
+[brandFilter, colorFilter, sizeFilter, priceFilter].forEach(filter => {
+  filter.addEventListener('change', handleFilterChange);
+});
+
+resetFiltersButton.addEventListener('click', function() {
+  [brandFilter, colorFilter, sizeFilter, priceFilter].forEach(filter => {
+    filter.value = 'All';
+  });
   filterProducts();
 });
 
+populateFilterOptions(brandFilter, shoes.map(shoe => shoe.brand), 'Brand');
+populateFilterOptions(colorFilter, shoes.map(shoe => shoe.color), 'Color');
+populateFilterOptions(sizeFilter, shoes.map(shoe => shoe.size), 'Size');
 renderProducts(shoes);

@@ -13,40 +13,23 @@
     <h2 class="text-center mb-4 text-uppercase tracking-wide fw-bold">Exclusive Shoe Collection</h2>
 
     <div class="filter-bar">
-      <form id="filterForm" class="row g-2 align-items-center">
+      <div class="row g-2 align-items-center">
         
         <div class="col-12 col-sm-6 col-md-2">
           <select id="brandFilter" class="form-select">
             <option value="All">Brand (All)</option>
-            <option value="Nike">Nike</option>
-            <option value="Adidas">Adidas</option>
-            <option value="Puma">Puma</option>
-            <option value="New Balance">New Balance</option>
-            <option value="Vans">Vans</option>
           </select>
         </div>
 
         <div class="col-12 col-sm-6 col-md-2">
           <select id="colorFilter" class="form-select">
             <option value="All">Color (All)</option>
-            <option value="Black">Black</option>
-            <option value="White">White</option>
-            <option value="Blue">Blue</option>
-            <option value="Red">Red</option>
-            <option value="Green">Green</option>
-            <option value="Orange">Orange</option>
-            <option value="Pink">Pink</option>
-            <option value="Brown">Brown</option>
           </select>
         </div>
 
         <div class="col-12 col-sm-6 col-md-2">
           <select id="sizeFilter" class="form-select">
             <option value="All">Size (All)</option>
-            <option value="42">Size 42</option>
-            <option value="44">Size 44</option>
-            <option value="46">Size 46</option>
-            <option value="48">Size 48</option>
           </select>
         </div>
 
@@ -58,12 +41,12 @@
             <option value="201-300">$201 - $300</option>
           </select>
         </div>
-    
-        <div class="col-12 col-md-3">
-          <button type="submit" class="btn btn-primary w-100 btn-search">SEARCH</button>
+
+        <div class="col-12 col-sm-6 col-md-3">
+          <button id="resetFilters" type="button" class="btn btn-secondary w-100">Reset Filters</button>
         </div>
 
-      </form>
+      </div>
     </div>
 
     <div id="productGrid" class="row g-4">
